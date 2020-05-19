@@ -11,7 +11,8 @@ namespace SortingAlgorithms
         static void Main(string[] args)
         {
 
-            BogoSort.RunSortMethod();
+            //BogoSort.RunSortMethod();
+            BubbleSort.RunSortMethod();
            
 
 
