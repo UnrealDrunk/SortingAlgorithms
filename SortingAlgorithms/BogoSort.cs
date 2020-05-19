@@ -14,14 +14,19 @@ namespace SortingAlgorithms
         /// </summary>
         public static void RunSortMethod()
         {
-            
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch(); // для измерения времени, затраченного на выполение программы
+            sw.Start();
+
             AutomaticArrayFormation automatic = new AutomaticArrayFormation();
             int[] array = automatic.ConstructArray();
 
         
             WriteLine("Отсортированный массив методом случайной сортировки: {0}", string.Join(", ", ExecuteBogoSort(array)));
 
+            WriteLine("На выполнение программы было затрачено {0} миллисекунд", sw.ElapsedMilliseconds);
+
             ReadLine();
+
 
         }
 
