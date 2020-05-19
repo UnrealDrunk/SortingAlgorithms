@@ -14,17 +14,12 @@ namespace SortingAlgorithms
         /// </summary>
         public static void RunSortMethod()
         {
-            WriteLine("Случайная сортировка");
-            Write("Введите элементы массива через пробел");
-            var parts = ReadLine().Split(new[] { " ", ",", ";" }, StringSplitOptions.RemoveEmptyEntries);
-            var array = new int[parts.Length];
-            for (int i = 0; i < parts.Length; i++)
-            {
-                array[i] = Convert.ToInt32(parts[i]);
-            }
-           
+            
+            AutomaticArrayFormation automatic = new AutomaticArrayFormation();
+            int[] array = automatic.ConstructArray();
 
-            WriteLine("Отсортированный массив: {0}", string.Join(", ", ExecuteBogoSort(array)));
+        
+            WriteLine("Отсортированный массив методом случайной сортировки: {0}", string.Join(", ", ExecuteBogoSort(array)));
 
             ReadLine();
 

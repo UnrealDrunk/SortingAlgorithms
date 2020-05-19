@@ -6,9 +6,10 @@ namespace SortingAlgorithms
     public class AutomaticArrayFormation
     {
 
-        bool IsNumber = false; // Для проверки корректности ввода числа
-        int arrayLength = 0; // Для хранения длинны массива
-        Random random = new Random();// переменная генерации случайных чисел
+        private bool IsNumber = false; // Для проверки корректности ввода числа
+        private int arrayLength = 0; // Для хранения длинны массива
+        private Random random = new Random();// переменная генерации случайных чисел
+
 
         /// <summary>
         /// Метод автоматического формирования массива
@@ -38,12 +39,25 @@ namespace SortingAlgorithms
 
             for (int number = 0; number < array.Length; number++)
             {
+               
                 array[number] = random.Next(1, arrayLength);
             }
+
+            Write("Сгенерирован новый массив: ");
+            foreach (int num in array)
+                Write("{0}, ", array[num]);
+
+            Write("\n");
+
 
 
             return array;
        
         }
+
+  
+
+
+
     }
 }

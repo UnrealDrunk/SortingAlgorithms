@@ -11,15 +11,16 @@ namespace SortingAlgorithms
         static void Main(string[] args)
         {
 
-            //BogoSort.RunSortMethod();
+            BogoSort.RunSortMethod();
             //AutomaticArrayFormation.ConstructArray();
-            AutomaticArrayFormation auto = new AutomaticArrayFormation();
+            //AutomaticArrayFormation auto = new AutomaticArrayFormation();
 
-            int[] array = auto.ConstructArray();
+            //int[] array = auto.ConstructArray();
 
-            foreach (int num in array)
-                Console.Write("{0}, ", array[num]);
+            //foreach (int num in array)
+            //    Console.Write("{0}, ", array[num]);
 
+            //Console.ReadLine();
 
 
 
