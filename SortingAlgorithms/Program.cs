@@ -10,6 +10,12 @@ namespace SortingAlgorithms
     {
         static void Main(string[] args)
         {
+
+            BogoSort.ExecuteBogoSort();
+
+
+
+
         }
     }
 }
