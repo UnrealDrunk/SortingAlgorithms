@@ -5,7 +5,7 @@ using static System.Console;
 namespace SortingAlgorithms
 {
     /// <summary>
-    /// Класс описывающий работу Случайной сортировки
+    /// Класс описывающий работу Случайной сортировки, один из самых неэффективных алгоритмов
     /// </summary>
     public static class BogoSort
     {
