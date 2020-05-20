@@ -13,7 +13,7 @@ namespace SortingAlgorithms
 
             //BogoSort.RunSortMethod();
             BubbleSort.RunSortMethod();
-           
+
 
 
 
