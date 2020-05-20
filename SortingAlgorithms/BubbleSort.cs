@@ -17,7 +17,7 @@ namespace SortingAlgorithms
             sw.Start();
 
             AutomaticArrayFormation automatic = new AutomaticArrayFormation();
-            int[] array = automatic.ConstructArray();
+            int[] array = AutomaticArrayFormation.ShowConstructedArray();
 
 
             WriteLine("Отсортированный массив методом сортировки пузырьком: {0}", string.Join(", ", ExecuteBubbleSort(array)));

@@ -6,17 +6,23 @@ namespace SortingAlgorithms
     public class AutomaticArrayFormation
     {
 
-        private bool IsNumber = false; // Для проверки корректности ввода числа
-        private int arrayLength = 0; // Для хранения длинны массива
-        private Random random = new Random();// переменная генерации случайных чисел
+        //приватные переменные
 
+        //private bool IsNumber = false; // Для проверки корректности ввода числа
+        //private int arrayLength = 0; // Для хранения длинны массива
+        //private Random random = new Random();// переменная генерации случайных чисел
+        private static int[] constructedArray;
+ 
+        //
 
         /// <summary>
         /// Метод автоматического формирования массива
         /// </summary>
-        public int[] ConstructArray()
+        public static void ConstructArray()
         {
-           
+            bool IsNumber= false;
+            int arrayLength = 0;
+            Random random = new Random();
 
             Write("Определите размер массива, введите число: ");
             
@@ -49,13 +55,15 @@ namespace SortingAlgorithms
 
             Write("\n");
 
+            constructedArray = array;
 
-
-            return array;
-       
         }
 
-  
+        public static int[] ShowConstructedArray()
+        {
+            return constructedArray;
+        }
+
 
 
 

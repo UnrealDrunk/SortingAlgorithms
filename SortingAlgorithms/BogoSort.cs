@@ -17,11 +17,12 @@ namespace SortingAlgorithms
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch(); // для измерения времени, затраченного на выполение программы
             sw.Start();
 
-            AutomaticArrayFormation automatic = new AutomaticArrayFormation();
-            int[] array = automatic.ConstructArray();
+            //AutomaticArrayFormation automatic = new AutomaticArrayFormation();
+            //AutomaticArrayFormation.ConstructArray();
+            //int[] array = AutomaticArrayFormation.ShowConstructedArray();
 
         
-            WriteLine("Отсортированный массив методом случайной сортировки: {0}", string.Join(", ", ExecuteBogoSort(array)));
+            //WriteLine("Отсортированный массив методом случайной сортировки: {0}", string.Join(", ", ExecuteBogoSort(array)));
 
             WriteLine("На выполнение программы было затрачено {0} миллисекунд", sw.ElapsedMilliseconds);
 

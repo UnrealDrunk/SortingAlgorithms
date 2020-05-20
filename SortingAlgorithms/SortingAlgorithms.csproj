@@ -46,6 +46,7 @@
     <Compile Include="AutomaticArrayFormation.cs" />
     <Compile Include="BogoSort.cs" />
     <Compile Include="BubbleSort.cs" />
+    <Compile Include="MethodAccessor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
