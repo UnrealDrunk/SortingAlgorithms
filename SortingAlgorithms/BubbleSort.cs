@@ -9,15 +9,15 @@ namespace SortingAlgorithms
     public static class BubbleSort
     {
         /// <summary>
-        /// Метода запуск процедуры сортировки пузырьком
+        /// Начать сортировку Пузырьковым методом
         /// </summary>
-        public static void RunSortMethod()
+        /// <param name="incomeArray">Массив, который требуется отсортировать</param>
+        public static void RunSortMethod(int[]incomeArray)
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch(); // для измерения времени, затраченного на выполение программы
             sw.Start();
 
-            AutomaticArrayFormation automatic = new AutomaticArrayFormation();
-            int[] array = automatic.ConstructArray();
+            int[] array = incomeArray;
 
 
             WriteLine("Отсортированный массив методом сортировки пузырьком: {0}", string.Join(", ", ExecuteBubbleSort(array)));

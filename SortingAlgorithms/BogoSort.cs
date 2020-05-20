@@ -9,16 +9,16 @@ namespace SortingAlgorithms
     /// </summary>
     public static class BogoSort
     {
-        /// <summary>
-        /// Начать выполнение случайной сортировки
-        /// </summary>
-        public static void RunSortMethod()
+       /// <summary>
+       /// Начать выполенение случайной сортировки
+       /// </summary>
+       /// <param name="incomeArray">Массив, который требуется отсортировать</param>
+        public static void RunSortMethod(int[] incomeArray)
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch(); // для измерения времени, затраченного на выполение программы
             sw.Start();
 
-            AutomaticArrayFormation automatic = new AutomaticArrayFormation();
-            int[] array = automatic.ConstructArray();
+            int[] array = incomeArray;
 
 
             WriteLine("Отсортированный массив методом случайной сортировки: {0}", string.Join(", ", ExecuteBogoSort(array)));

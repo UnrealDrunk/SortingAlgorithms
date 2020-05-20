@@ -11,6 +11,7 @@ namespace SortingAlgorithms
         private bool IsNumber = false; // Для проверки корректности ввода числа
         private int arrayLength = 0; // Для хранения длинны массива
         private Random random = new Random();// переменная генерации случайных чисел
+    
  
         //
 
@@ -57,7 +58,6 @@ namespace SortingAlgorithms
         }
 
       
-
 
 
 

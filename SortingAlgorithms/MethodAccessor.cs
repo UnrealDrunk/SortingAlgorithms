@@ -10,11 +10,32 @@ namespace SortingAlgorithms
     {
         // секция приватных переменных
 
-        private bool bogoSort = false;
-        private bool bubbleSort = false;
+        private int[] SavedArray{ get; set; }
+
+        /// <summary>
+        /// Метод сохранения сгененрированного массива
+        /// </summary>
+        public void SaveArray()
+        {
+            AutomaticArrayFormation automatic = new AutomaticArrayFormation();
+            SavedArray = automatic.ConstructArray();
+            
+        }
+
+
+        /// <summary>
+        /// Метод передачи сгенерированного массива
+        /// </summary>
+        /// <returns></returns>
+        public int[] ShowArray()
+        {
+            
+            return SavedArray;
+        }
 
 
 
+      
 
 
     }

@@ -12,7 +12,17 @@ namespace SortingAlgorithms
         {
 
             //BogoSort.RunSortMethod();
-            BubbleSort.RunSortMethod();
+            //BubbleSort.RunSortMethod();
+
+            MethodAccessor method = new MethodAccessor();
+            method.SaveArray();
+            int[] array = method.ShowArray();
+            int[] array2 = method.ShowArray();
+
+            BubbleSort.RunSortMethod(array2);
+            BogoSort.RunSortMethod(array);
+
+
 
 
 
