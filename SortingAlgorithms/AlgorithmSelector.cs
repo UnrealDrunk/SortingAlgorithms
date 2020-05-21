@@ -10,18 +10,19 @@ namespace SortingAlgorithms
     public static class AlgorithmSelector
     {
 
-        private static bool IsContinued = false;
+        private static bool IsContinued = true;
 
        public static void Start()
        {
-            while (!IsContinued)
+            while (IsContinued)
             {
                 WriteInfo();
                 CheckSelector();
+                ContinueToExecute();
 
             }
-          
-            
+
+            ReadLine();
            
        }
 
@@ -32,7 +33,8 @@ namespace SortingAlgorithms
         {
             Write("Выберите один из следующих алгоритмов сортировки:\n" +
                "нажимте 1 для БЫСТРОЙ СОРТИРОВКИ \n" +
-               "нажмите 2 для СОРТИРОВКИ ПУЗЫРЬКОМ \n");
+               "нажмите 2 для СОРТИРОВКИ ПУЗЫРЬКОМ \n" +
+               "Ваш выбор?: ");
 
         }
 
@@ -91,12 +93,28 @@ namespace SortingAlgorithms
             bool IsCorrectChosen = false;
             while (!IsCorrectChosen)
             {
-                Write("Продолжить выполнение программы? \n" +
-                    "ДА - нажмите 1 \n" +
-                    "НЕТ - нажмите 2 \n");
-                WriteLine("Ваш выбор?: ");
+                bool IsNumber = false;
+                int decision = 0;
 
-                int decision = Convert.ToInt32(ReadLine());
+             
+                while (!IsNumber)
+                {
+                    Write("Продолжить выполнение программы? \n" +
+                 "ДА - нажмите 1 \n" +
+                 "НЕТ - нажмите 2 \n" +
+                 "Ваш выбор?: ");
+
+                    if (Int32.TryParse(ReadLine(), out decision))
+                    {
+                        IsNumber = true;
+                    }
+                    else
+                    {
+                        WriteLine("Некорректный ввод данных, необходимо ввести  1 или 2 ");
+                    }
+                }
+
+          
                 switch (decision)
                 {
                     case 1:
@@ -112,8 +130,9 @@ namespace SortingAlgorithms
                     default:
                         WriteLine("Некорректный выбор, используйте только клавиши 1 или 2");
                         break;
-                    
+
                 }
+
             }
             return IsContinued;
         }

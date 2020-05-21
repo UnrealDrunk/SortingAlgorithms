@@ -25,7 +25,6 @@ namespace SortingAlgorithms
 
             WriteLine("На выполнение программы было затрачено {0} миллисекунд", sw.ElapsedMilliseconds);
 
-            ReadLine();
 
 
         }
