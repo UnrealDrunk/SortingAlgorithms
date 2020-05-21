@@ -43,7 +43,7 @@ namespace SortingAlgorithms
 
             for (int number = 0; number < array.Length; number++)
             {
-               
+
                 array[number] = random.Next(1, arrayLength);
             }
 
