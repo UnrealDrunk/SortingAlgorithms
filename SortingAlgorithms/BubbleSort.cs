@@ -12,12 +12,13 @@ namespace SortingAlgorithms
         /// Начать сортировку Пузырьковым методом
         /// </summary>
         /// <param name="incomeArray">Массив, который требуется отсортировать</param>
-        public static void RunSortMethod(int[]incomeArray)
+        public static void RunSortMethod()
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch(); // для измерения времени, затраченного на выполение программы
             sw.Start();
 
-            int[] array = incomeArray;
+            AutomaticArrayFormation auto = new AutomaticArrayFormation();
+            int[] array = auto.ConstructArray();
 
 
             WriteLine("Отсортированный массив методом сортировки пузырьком: {0}", string.Join(", ", ExecuteBubbleSort(array)));
