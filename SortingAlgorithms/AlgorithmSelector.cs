@@ -10,11 +10,17 @@ namespace SortingAlgorithms
     public static class AlgorithmSelector
     {
 
+        private static bool IsContinued = false;
+
        public static void Start()
        {
+            while (!IsContinued)
+            {
+                WriteInfo();
+                CheckSelector();
 
-            WriteInfo();
-            CheckSelector();
+            }
+          
             
            
        }
@@ -36,11 +42,23 @@ namespace SortingAlgorithms
         private static void CheckSelector()
         {
             bool IsChosen = false;
-            int selector;
-
+            
             while (!IsChosen)
             {
-                selector = Convert.ToInt32(ReadLine());
+                bool IsNumber = false;
+                int selector=0;
+                while (!IsNumber)
+                {
+                    if(Int32.TryParse(ReadLine(), out selector))
+                    {
+                        IsNumber = true;
+                    }
+                    else
+                    {
+                        WriteLine("Некорректный ввод, предполагается только ввод чисел");
+                        WriteInfo();
+                    }
+                }
                 switch (selector)
                 {
                     case 1:
@@ -62,6 +80,42 @@ namespace SortingAlgorithms
                 
             }
 
+        }
+
+        /// <summary>
+        /// Метод контроля продолжения / завершения программы
+        /// </summary>
+        /// <returns>выбор - завершить / продолжить </returns>
+        private static bool ContinueToExecute()
+        {
+            bool IsCorrectChosen = false;
+            while (!IsCorrectChosen)
+            {
+                Write("Продолжить выполнение программы? \n" +
+                    "ДА - нажмите 1 \n" +
+                    "НЕТ - нажмите 2 \n");
+                WriteLine("Ваш выбор?: ");
+
+                int decision = Convert.ToInt32(ReadLine());
+                switch (decision)
+                {
+                    case 1:
+                        WriteLine("Программа продолжает работу");
+                        IsContinued = true;
+                        IsCorrectChosen = true;
+                        break;
+                    case 2:
+                        WriteLine("Программа прекращает работу");
+                        IsContinued = false;
+                        IsCorrectChosen = true;
+                        break;
+                    default:
+                        WriteLine("Некорректный выбор, используйте только клавиши 1 или 2");
+                        break;
+                    
+                }
+            }
+            return IsContinued;
         }
 
 
