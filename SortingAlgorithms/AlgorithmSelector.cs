@@ -31,8 +31,8 @@ namespace SortingAlgorithms
         private static void WriteInfo()
         {
             Write("Выберите один из следующих алгоритмов сортировки:\n" +
-               "нажимте 1 для Быстрой сортировки \n" +
-               "нажмите 2 для Сортировки Пузырьком \n");
+               "нажимте 1 для БЫСТРОЙ СОРТИРОВКИ \n" +
+               "нажмите 2 для СОРТИРОВКИ ПУЗЫРЬКОМ \n");
 
         }
 
@@ -62,12 +62,12 @@ namespace SortingAlgorithms
                 switch (selector)
                 {
                     case 1:
-                        WriteLine("Выбран алгоритм случайной сортировки");
+                        WriteLine("Выбран алгоритм СЛУЧАЙНОЙ СОРТИРОВКИ");
                         BogoSort.RunSortMethod();
                         IsChosen = true;
                         break;
                     case 2:
-                        WriteLine("Выбран алгоритм Сортировки Пузырьком");
+                        WriteLine("Выбран алгоритм СОРТИРОВКИ ПУЗЫРЬКОМ");
                         BubbleSort.RunSortMethod();
                         IsChosen = true;
                         break;
