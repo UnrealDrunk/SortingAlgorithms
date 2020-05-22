@@ -15,10 +15,19 @@ namespace SortingAlgorithms
             int N = Convert.ToInt32(ReadLine());
             WriteLine("Введите числа для сортировки:");
             int[] array = new int[N];
+
+            Random rnd = new Random();
+
+
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = Convert.ToInt32(ReadLine());
+                array[i] = rnd.Next(1,10);
             }
+
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    array[i] = Convert.ToInt32(ReadLine());
+            //}
 
 
             //int[] array = new int[] { 5, 4, 3, 2, 1 };

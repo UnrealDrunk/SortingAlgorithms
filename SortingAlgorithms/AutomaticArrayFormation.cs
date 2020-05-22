@@ -44,12 +44,19 @@ namespace SortingAlgorithms
             for (int number = 0; number < array.Length; number++)
             {
 
-                array[number] = random.Next(1, arrayLength);
+                array[number] = random.Next(1, 100);
             }
 
             Write("Сгенерирован новый массив: ");
-            foreach (int num in array)
-                Write("{0}, ", array[num]);
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Write("{0}, ", array[i]);
+
+            }
+
+            //foreach (int num in array)
+            //    Write("{0}, ", array[num]);
 
             Write("\n");
 

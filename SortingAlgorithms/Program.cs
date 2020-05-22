@@ -11,9 +11,9 @@ namespace SortingAlgorithms
         static void Main(string[] args)
         {
 
-            //AlgorithmSelector.Start();
+            AlgorithmSelector.Start();
 
-            TestClass.ExecuteMethod();
+            //TestClass.ExecuteMethod();
 
 
         }
