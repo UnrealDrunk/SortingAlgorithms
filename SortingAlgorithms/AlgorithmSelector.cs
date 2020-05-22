@@ -27,6 +27,8 @@ namespace SortingAlgorithms
 
             }
 
+            WriteLine("\nСтатистика операций:");
+            DataOfOps.PrintList();
             ReadLine();
            
        }
