@@ -7,13 +7,18 @@ using static System.Console;
 
 namespace SortingAlgorithms
 {
-    public static class AlgorithmSelector
+    public static  class AlgorithmSelector
     {
 
         private static bool IsContinued = true;
+        public static int[] Array { get; set; }
 
        public static void Start()
        {
+
+            AutomaticArrayFormation auto = new AutomaticArrayFormation();
+            Array = auto.ConstructArray();
+
             while (IsContinued)
             {
                 WriteInfo();
