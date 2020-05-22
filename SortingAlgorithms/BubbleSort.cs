@@ -20,8 +20,27 @@ namespace SortingAlgorithms
             AutomaticArrayFormation auto = new AutomaticArrayFormation();
             int[] array = auto.ConstructArray();
 
+            foreach (var i in array)
+                Write("{0}, ", array[i]);
 
-            WriteLine("Отсортированный массив методом сортировки пузырьком: {0}", string.Join(", ", ExecuteBubbleSort(array)));
+            int[] array2 = new int[array.Length];
+
+            for(int i =0; i < array.Length; i++)
+            {
+                array2[i] = array[i];
+            }
+
+            //WriteLine("Отсортированный массив методом сортировки пузырьком: {0}", string.Join(", ", ExecuteBubbleSort(array)));
+            ExecuteBubbleSort(array);
+            Write("Отсортированный массив методом сортировки пузырьком: ");
+            foreach (var i in array)
+                Write("{0}, ", array[i]);
+            Write("\n");
+
+            Write("Резервный массив: ");
+            foreach (var i in array2)
+                Write("{0}, ", array2[i]);
+            Write("\n");
 
             WriteLine("На выполнение программы было затрачено {0} миллисекунд", sw.ElapsedMilliseconds);
 
@@ -44,22 +63,21 @@ namespace SortingAlgorithms
         /// </summary>
         /// <param name="array">Массв, который необходимо отсортировать</param>
         /// <returns></returns>
-        private static int[] ExecuteBubbleSort( int[] array)
+        private static void ExecuteBubbleSort( int[] array)
         {
             int arrayLength = array.Length;
 
-            for(int i =0; i <arrayLength - 1; i++)
+            for(int i =0; i <arrayLength; i++)
             {
-                for(int j =0; j <arrayLength - i -1; j++)
+                for(int j =i+1; j <arrayLength; j++)
                 {
-                    if(array[j] > array[j + 1])
+                    if(array[i] > array[j])
                     {
-                        SwapElems(ref array[j], ref array[j + 1]);
+                        SwapElems(ref array[i], ref array[j]);
                     }
                 }
             }
 
-            return array;
         }
 
 
