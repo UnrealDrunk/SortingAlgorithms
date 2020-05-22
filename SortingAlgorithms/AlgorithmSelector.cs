@@ -128,6 +128,7 @@ namespace SortingAlgorithms
                         WriteLine("Программа продолжает работу");
                         IsContinued = true;
                         IsCorrectChosen = true;
+                        ConstructNewArray();
                         break;
                     case 2:
                         WriteLine("Программа прекращает работу");
@@ -145,7 +146,58 @@ namespace SortingAlgorithms
         }
 
 
+        /// <summary>
+        /// Метод определяет, продолжить ли работу с текущим массивом или сгенерировать новый
+        /// </summary>
+        private static void ConstructNewArray()
+        {
+            bool IsCorrectChosen = false;
 
+            while (!IsCorrectChosen)
+            {
+                bool IsNumber = false;
+                int decision = 0;
+
+                while (!IsNumber)
+                {
+                    Write("Создать новый массив или использовать уже созданный далее?\n" +
+                         "Нажмите 1 для создания нового массива\n" +
+                         "Нажмите 2 для продолжения использования текущего массива\n" +
+                         "Ваш выбор?: ");
+
+                    if (Int32.TryParse(ReadLine(), out decision))
+                    {
+                        IsNumber = true;
+                    }
+                    else
+                    {
+                        WriteLine("Некорректный ввод данных, необходимо ввести  1 или 2 ");
+                    }
+                }
+
+
+                switch (decision)
+                {
+                    case 1:
+                        WriteLine("Инициируется создание нового массива");
+                        AutomaticArrayFormation auto = new AutomaticArrayFormation();
+                        Array = auto.ConstructArray();
+                        IsCorrectChosen = true;
+                        break;
+                    case 2:
+                        WriteLine("Продолжатся работа с текущим массивом");
+                        IsCorrectChosen = true;
+                        break;
+                    default:
+                        WriteLine("Некорректный выбор, используйте только клавиши 1 или 2");
+                        break;
+
+                }
+            }
+
+           
+
+        }
        
 
 
