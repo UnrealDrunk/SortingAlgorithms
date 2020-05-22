@@ -17,8 +17,16 @@ namespace SortingAlgorithms
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch(); // для измерения времени, затраченного на выполение программы
             sw.Start();
-            AutomaticArrayFormation auto = new AutomaticArrayFormation();
-            int[] array = auto.ConstructArray();
+          
+
+            int[] incomingArray = AlgorithmSelector.Array;
+
+            int[] array = new int[incomingArray.Length];
+
+            for (int i = 0; i < incomingArray.Length; i++)
+            {
+                array[i] = incomingArray[i];
+            }
 
 
             WriteLine("Отсортированный массив методом случайной сортировки: {0}", string.Join(", ", ExecuteBogoSort(array)));

@@ -7,13 +7,18 @@ using static System.Console;
 
 namespace SortingAlgorithms
 {
-    public static class AlgorithmSelector
+    public static  class AlgorithmSelector
     {
 
         private static bool IsContinued = true;
+        public static int[] Array { get; set; }
 
        public static void Start()
        {
+
+            AutomaticArrayFormation auto = new AutomaticArrayFormation();
+            Array = auto.ConstructArray();
+
             while (IsContinued)
             {
                 WriteInfo();
@@ -32,7 +37,7 @@ namespace SortingAlgorithms
         private static void WriteInfo()
         {
             Write("Выберите один из следующих алгоритмов сортировки:\n" +
-               "нажимте 1 для БЫСТРОЙ СОРТИРОВКИ \n" +
+               "нажимте 1 для СЛУЧАЙНОЙ СОРТИРОВКИ \n" +
                "нажмите 2 для СОРТИРОВКИ ПУЗЫРЬКОМ \n" +
                "Ваш выбор?: ");
 
