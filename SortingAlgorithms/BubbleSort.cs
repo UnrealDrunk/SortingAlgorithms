@@ -46,6 +46,12 @@ namespace SortingAlgorithms
 
             WriteLine("На выполнение программы было затрачено {0} миллисекунд", sw.ElapsedMilliseconds);
 
+            string info = "Операция номер " + DataOfOps.ReturnNumOfOps() + "- произведена сортировка массива МЕТОДОМ ПУЗЫРЬКА," +
+                 " состоящего из " + incomingArray.LongLength + " чисел " +
+                 " Затраченное время на проведение операции " + sw.ElapsedMilliseconds + " миллисекунд";
+
+            DataOfOps.AddInfoToList(info);
+            DataOfOps.UppendNumOfOps();
          
 
         }
