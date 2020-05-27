@@ -9,8 +9,12 @@ namespace SortingAlgorithms
     /// <summary>
     /// Класс описывающий работу алгоритма вставками
     /// </summary>
-    class InsertionSort
+    public class InsertionSort
     {
+
+
+
+
 
 
     }

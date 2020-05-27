@@ -10,7 +10,7 @@ namespace SortingAlgorithms
     /// <summary>
     /// Класс, описывающий Сортировку Перемешиванием / Шейкерную (коктейльную сортировку) сортировку
     /// </summary>
-    class Shakersort
+    public class Shakersort
     {
 
 
