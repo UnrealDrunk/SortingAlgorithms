@@ -41,6 +41,7 @@ namespace SortingAlgorithms
             Write("Выберите один из следующих алгоритмов сортировки:\n" +
                "нажимте 1 для СЛУЧАЙНОЙ СОРТИРОВКИ \n" +
                "нажмите 2 для СОРТИРОВКИ ПУЗЫРЬКОМ \n" +
+               "нажмите 3 для СОРТИРОВКИ ПЕРЕМЕШИВАНИЕМ \n"+
                "Ваш выбор?: ");
 
         }
@@ -78,6 +79,11 @@ namespace SortingAlgorithms
                     case 2:
                         WriteLine("Выбран алгоритм СОРТИРОВКИ ПУЗЫРЬКОМ");
                         BubbleSort.RunSortMethod();
+                        IsChosen = true;
+                        break;
+                    case 3:
+                        WriteLine("Выбран алгоритм СОРИРОВКИ ПЕРЕМЕШИВАНИЕМ");
+                        Shakersort.RunSortMethod();
                         IsChosen = true;
                         break;
                     default:

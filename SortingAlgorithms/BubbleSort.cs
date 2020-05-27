@@ -58,7 +58,7 @@ namespace SortingAlgorithms
 
 
         /// <summary>
-        /// Сортировка пузыром
+        /// Сортировка пузырьком
         /// </summary>
         /// <param name="array">Массв, который необходимо отсортировать</param>
         /// <returns></returns>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace SortingAlgorithms
 {
@@ -12,6 +13,54 @@ namespace SortingAlgorithms
     class Shakersort
     {
 
+
+        /// <summary>
+        /// Начать сортировку Методом Перемешивания / Шейкерным методом
+        /// </summary>
+        /// <param name="incomeArray">Массив, который требуется отсортировать</param>
+        public static void RunSortMethod()
+        {
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch(); // для измерения времени, затраченного на выполение программы
+            sw.Start();
+
+
+            int[] incomingArray = AlgorithmSelector.Array;
+
+            int[] array = new int[incomingArray.Length];
+
+            for (int i = 0; i < incomingArray.Length; i++)
+            {
+                array[i] = incomingArray[i];
+            }
+
+
+
+            ExecuteShakerSort(array);
+            Write("Отсортированный массив методом СОРТИРОВКИ ПЕРЕМЕШИВАНИЕМ: ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (i == array.Length - 1)
+                {
+                    Write("{0} \n", array[i]);
+                }
+                else
+                {
+                    Write("{0}, ", array[i]);
+                }
+            }
+
+
+            WriteLine("На выполнение программы было затрачено {0} миллисекунд", sw.ElapsedMilliseconds);
+
+            string info = "Операция номер " + DataOfOps.ReturnNumOfOps() + "- произведена сортировка массива МЕТОДОМ ПЕРЕМЕШИВАНИЯ," +
+                 " состоящего из " + incomingArray.LongLength + " чисел " +
+                 " Затраченное время на проведение операции " + sw.ElapsedMilliseconds + " миллисекунд";
+
+            DataOfOps.AddInfoToList(info);
+            DataOfOps.UppendNumOfOps();
+
+
+        }
 
 
 
@@ -29,17 +78,21 @@ namespace SortingAlgorithms
             e2 = temp;
         }
 
-
-        private static int [] ShakerSort(int[] array)
+        /// <summary>
+        /// Сортировка перемешиванием / шейкерная сортировка
+        /// </summary>
+        /// <param name="array">Массив, который требуется отсортировать</param>
+        /// <returns>Отсортированный массив</returns>
+        private static int [] ExecuteShakerSort(int[] array)
         {
             for (int i = 0; i < array.Length/2; i++)
             {
                 bool IsFlagSwapped = false;
                 for (int j = 0; j < array.Length - i -1; j++)
                 {
-                    if (array[j-1] >array[j])
+                    if (array[j] >array[j+1])
                     {
-                        Swap(ref array[j - 1], ref array[j]);
+                        Swap(ref array[j], ref array[j+1]);
                         IsFlagSwapped = true;
                     }
                 }
