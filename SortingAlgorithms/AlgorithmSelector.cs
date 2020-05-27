@@ -88,7 +88,7 @@ namespace SortingAlgorithms
                         IsChosen = true;
                         break;
                     case 4:
-                        WriteLine("Выбран алгоритм СОРИРОВКИ ПЕРЕМЕШИВАНИЕМ");
+                        WriteLine("Выбран алгоритм СОРИРОВКИ ВСТАВКАМИ");
                         InsertionSort.RunSortMethod();
                         IsChosen = true;
                         break;
